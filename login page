@@ -22,6 +22,148 @@
         }
 
         .login-box {
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prime Login Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #061a2d, #0b3b5a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: white;
+            width: 320px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px #0005;
+        }
+
+        .logo {
+            text-align: center;
+            color: #00a8e0;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #111827;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            background: #00a8e0;
+            color: #071421;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #159ac5;
+        }
+
+        .help {
+            margin-top: 18px;
+            color: #007185;
+            font-size: 14px;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="logo">prime</div>
+
+        <h2>Sign in</h2>
+
+        <form id="loginForm">
+
+            <label for="email">Email or mobile number</label>
+            <input
+                type="text"
+                id="email"
+                placeholder="Enter email or mobile"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Sign in</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <div class="help">Forgot your password?</div>
+
+        <p class="note">
+            Practice project only. Sign-in is not connected
+            to a real account.
+        </p>
+
+    </div>
+
+    <script>
+        document.getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document.getElementById("message").textContent =
+                    "Demo only: login is not connected.";
+
+                document.getElementById("password").value = "";
+            });
+    </script>
+
+</body>
+</html>
+```
             width: 350px;
             padding: 30px;
             background: white;
